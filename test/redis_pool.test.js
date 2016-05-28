@@ -1,6 +1,6 @@
 var assert = require('assert')
   , Step = require('step')
-  , _ = require('underscore')
+  , _ = require('lodash')
   , RedisPool = require('../')
   , tests = module.exports = {};
 
@@ -29,11 +29,14 @@ suite('redis_pool', function() {
     
     test('pool object has an acquire function', function(done){
       var found=false;
+      assert(typeof redis_pool.acquire === 'function')
+      /*
       var functions = _.functions(redis_pool);
       for (var i=0; i<functions.length; ++i) {
           if ( functions[i] == 'acquire' ) { found=true; break; }
       }
       assert.ok(found);
+      */
       done();
     });
     

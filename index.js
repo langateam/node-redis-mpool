@@ -1,5 +1,5 @@
 var redis = require('redis')
-    , _ = require('underscore')
+    , _ = require('lodash')
     , Pool = require('generic-pool').Pool
     , EventEmitter = require('events').EventEmitter
     , util = require('util')
